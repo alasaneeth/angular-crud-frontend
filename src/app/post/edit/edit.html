@@ -1,0 +1,32 @@
+<div class="card mt-5">
+    <h3 class="card-header p-3">Example IT Solution.com</h3>
+    <div class="card-body">
+
+        <div class="m1">
+        <a [routerLink] = "['/posts']" class="btn btn-primary btn-sm mb-2">
+         Back
+        </a>
+        </div>
+        <form (ngSubmit)="submit()">
+            <div class="mt-2">
+                <label>Title</label>
+                <input type="text" [(ngModel)] ="title" name="title" id="title" class="form-control"/>
+            </div>
+          
+            <div class="mt-2">
+                <label>Title</label>
+                <textarea type="text" [(ngModel)] = "body" name="body" id="body" class="form-control"></textarea>
+            </div>
+            @if(error){
+                <div class="text-danger">
+                    {{error}}
+                </div>
+            }
+            <div class="mt-2">
+                <button class="btn btn-success">Submit</button>
+            </div>
+            
+        </form>
+        
+    </div>
+</div>
